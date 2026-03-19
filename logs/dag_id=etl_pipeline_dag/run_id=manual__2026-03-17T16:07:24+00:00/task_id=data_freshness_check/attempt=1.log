@@ -1,0 +1,24 @@
+{"timestamp":"2026-03-17T16:08:27.016345Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 121. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-17T16:08:27.030480Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-17T16:08:27.031908Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/etl_pipeline_dag.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-17T16:08:31.853459Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/etl_pipeline_dag.py","lineno":37,"logger":"py.warnings"}
+{"timestamp":"2026-03-17T16:08:37.376746Z","level":"info","event":"📊 Watermark Record Found:","logger":"task.stdout"}
+{"timestamp":"2026-03-17T16:08:37.378447Z","level":"info","event":"   Status            : success","logger":"task.stdout"}
+{"timestamp":"2026-03-17T16:08:37.381054Z","level":"info","event":"   Load timestamp    : 2026-03-17 16:08:16.840224+00:00","logger":"task.stdout"}
+{"timestamp":"2026-03-17T16:08:37.382493Z","level":"info","event":"   Prev load         : 2026-03-17 15:31:03.669812+00:00","logger":"task.stdout"}
+{"timestamp":"2026-03-17T16:08:37.383795Z","level":"info","event":"   Logical date      : 2026-03-17","logger":"task.stdout"}
+{"timestamp":"2026-03-17T16:08:37.385174Z","level":"info","event":"   Files loaded      : 8","logger":"task.stdout"}
+{"timestamp":"2026-03-17T16:08:37.386647Z","level":"info","event":"   Notes             : Loaded 8 files for partition=2026-03-17 at 2026-03-17 16:08:16 UTC","logger":"task.stdout"}
+{"timestamp":"2026-03-17T16:08:37.388853Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-03-17T16:08:37.389942Z","level":"info","event":"⏱️  Freshness Window Check:","logger":"task.stdout"}
+{"timestamp":"2026-03-17T16:08:37.390906Z","level":"info","event":"   Last load time   : 2026-03-17 16:08:16.840224+00:00","logger":"task.stdout"}
+{"timestamp":"2026-03-17T16:08:37.391718Z","level":"info","event":"   Current UTC time : 2026-03-17 16:08:37.376344+00:00","logger":"task.stdout"}
+{"timestamp":"2026-03-17T16:08:37.392504Z","level":"info","event":"   Hours since load : 0.01h","logger":"task.stdout"}
+{"timestamp":"2026-03-17T16:08:37.393406Z","level":"info","event":"   Max allowed      : 25h","logger":"task.stdout"}
+{"timestamp":"2026-03-17T16:08:37.394517Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-03-17T16:08:37.396188Z","level":"info","event":"✅ Data Freshness Check PASSED!","logger":"task.stdout"}
+{"timestamp":"2026-03-17T16:08:37.397185Z","level":"info","event":"   Last load : 2026-03-17 16:08:16.840224+00:00","logger":"task.stdout"}
+{"timestamp":"2026-03-17T16:08:37.397858Z","level":"info","event":"   Age       : 0.01h (within 25h window)","logger":"task.stdout"}
+{"timestamp":"2026-03-17T16:08:37.398442Z","level":"info","event":"   Proceeding with ETL pipeline...","logger":"task.stdout"}
+{"timestamp":"2026-03-17T16:08:37.377569Z","level":"info","event":"Done. Returned value was: fresh","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-03-17T16:08:37.378595Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019cfc8e-3ca3-7a42-880d-2a175970499e'), task_id='data_freshness_check', dag_id='etl_pipeline_dag', run_id='manual__2026-03-17T16:07:24+00:00', try_number=1, dag_version_id=UUID('019cfc8c-b422-790f-81e9-cfb0c1c1040c'), map_index=-1, hostname='dc2ec3ec370b', context_carrier={}, task=<Task(PythonOperator): data_freshness_check>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=1, start_date=datetime.datetime(2026, 3, 17, 16, 8, 26, 964600, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1573}

@@ -1,0 +1,21 @@
+{"timestamp":"2026-03-18T09:04:43.751534Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 2399. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-18T09:04:43.767042Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-18T09:04:43.768310Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/etl_pipeline_dag.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-18T09:04:50.346308Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/etl_pipeline_dag.py","lineno":31,"logger":"py.warnings"}
+{"timestamp":"2026-03-18T09:04:50.441479Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:04:50.442543Z","level":"info","event":"=================================================================","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:04:50.443712Z","level":"info","event":"  BigQuery Load Summary — partition=2026-03-18","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:04:50.444692Z","level":"info","event":"=================================================================","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:04:55.275294Z","level":"info","event":"  ✅ orders               total=   198,882  today=       0","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:04:58.880542Z","level":"info","event":"  ✅ order_items          total=   225,300  today=       0","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:02.466780Z","level":"info","event":"  ✅ order_payments       total=   207,772  today=       0","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:06.972347Z","level":"info","event":"  ✅ order_reviews        total=   196,912  today=       0","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:08.638837Z","level":"info","event":"  ✅ products             total=    32,951  clustered dim table","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:10.167845Z","level":"info","event":"  ✅ geolocations         total=     1,671  clustered dim table","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:11.678453Z","level":"info","event":"  ✅ customers            total=    99,443  clustered dim table","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:13.153984Z","level":"info","event":"  ✅ sellers              total=     3,095  clustered dim table","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:13.154689Z","level":"info","event":"─────────────────────────────────────────────────────────────────","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:13.155216Z","level":"info","event":"  TOTAL                   966,026 rows across 8 tables","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:13.155855Z","level":"info","event":"=================================================================","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:13.156390Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:13.153924Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}

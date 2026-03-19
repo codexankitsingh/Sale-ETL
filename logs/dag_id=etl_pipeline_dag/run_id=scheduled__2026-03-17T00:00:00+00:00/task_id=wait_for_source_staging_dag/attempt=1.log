@@ -1,0 +1,5 @@
+{"timestamp":"2026-03-17T09:04:39.184585Z","level":"info","event":"Stats instance was created in PID 6 but accessed in PID 1676. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-17T09:04:39.355983Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-17T09:04:39.370670Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/etl_pipeline_dag.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-17T09:04:43.593756Z","level":"info","event":"Poking for DAG 'source_staging_dag' on 2026-03-17T00:00:00+00:00 ... ","logger":"airflow.task.operators.airflow.providers.standard.sensors.external_task.ExternalTaskSensor","filename":"external_task.py","lineno":308}
+{"timestamp":"2026-03-17T09:04:43.626270Z","level":"info","event":"Success criteria met. Exiting.","logger":"airflow.task.operators.airflow.providers.standard.sensors.external_task.ExternalTaskSensor","filename":"sensor.py","lineno":250}

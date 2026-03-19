@@ -1,0 +1,32 @@
+{"timestamp":"2026-03-18T09:05:37.425548Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 2430. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-18T09:05:37.440464Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-18T09:05:37.441794Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/etl_pipeline_dag.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-18T09:05:43.997263Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/etl_pipeline_dag.py","lineno":31,"logger":"py.warnings"}
+{"timestamp":"2026-03-18T09:05:44.033044Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.033779Z","level":"info","event":"=================================================================","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.034429Z","level":"info","event":"  ✅ PIPELINE COMPLETE — 2026-03-18","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.035012Z","level":"info","event":"=================================================================","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.035588Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.036221Z","level":"info","event":"  Stage 0 ✅  Freshness Check","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.036783Z","level":"info","event":"  Stage 1 ✅  Data Ingestion    (8 tables → landing_zone)","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.037323Z","level":"info","event":"  Stage 2 ✅  Spark Processing  (8 jobs → processed_zone)","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.037880Z","level":"info","event":"  Stage 3 ✅  BigQuery Load     (8 tables → sales_raw)","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.038396Z","level":"info","event":"  Stage 4 ✅  Analytics Views   (8 views → sales_analytics)","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.038904Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.039439Z","level":"info","event":"  BigQuery:","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.039949Z","level":"info","event":"    Dataset : sales_raw        (8 partitioned/clustered tables)","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.040415Z","level":"info","event":"    Dataset : sales_analytics  (8 views ready for Looker Studio)","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.040922Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.041668Z","level":"info","event":"  Views Created:","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.042283Z","level":"info","event":"    ✅ vw_order_summary","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.042874Z","level":"info","event":"    ✅ vw_daily_sales_performance","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.043369Z","level":"info","event":"    ✅ vw_customer_profile","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.043873Z","level":"info","event":"    ✅ vw_seller_performance","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.044384Z","level":"info","event":"    ✅ vw_product_performance","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.044799Z","level":"info","event":"    ✅ vw_payment_analysis","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.045173Z","level":"info","event":"    ✅ vw_review_sentiment","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.045596Z","level":"info","event":"    ✅ vw_geo_sales_heatmap","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.046063Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.046605Z","level":"info","event":"=================================================================","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.047057Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-03-18T09:05:44.032989Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}

@@ -1,0 +1,13 @@
+{"timestamp":"2026-03-17T15:30:56.652269Z","level":"info","event":"Stats instance was created in PID 6 but accessed in PID 4242. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-17T15:30:56.671143Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-17T15:30:56.672449Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/source_staging_dag.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-17T15:30:59.910020Z","level":"warning","event":"The `airflow.operators.trigger_dagrun.TriggerDagRunOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.trigger_dagrun.TriggerDagRunOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/source_staging_dag.py","lineno":29,"logger":"py.warnings"}
+{"timestamp":"2026-03-17T15:30:59.910282Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/source_staging_dag.py","lineno":30,"logger":"py.warnings"}
+{"timestamp":"2026-03-17T15:31:06.351667Z","level":"info","event":"📋 Previous load timestamp: 2026-03-17T15:14:49.676341+00:00","logger":"task.stdout"}
+{"timestamp":"2026-03-17T15:31:06.903890Z","level":"info","event":"✅ Watermark written successfully!","logger":"task.stdout"}
+{"timestamp":"2026-03-17T15:31:06.905133Z","level":"info","event":"   Status       : success","logger":"task.stdout"}
+{"timestamp":"2026-03-17T15:31:06.906046Z","level":"info","event":"   Load time    : 2026-03-17T15:31:03.669812+00:00","logger":"task.stdout"}
+{"timestamp":"2026-03-17T15:31:06.907067Z","level":"info","event":"   Prev load    : 2026-03-17T15:14:49.676341+00:00","logger":"task.stdout"}
+{"timestamp":"2026-03-17T15:31:06.910031Z","level":"info","event":"   Files loaded : 8","logger":"task.stdout"}
+{"timestamp":"2026-03-17T15:31:06.910850Z","level":"info","event":"   Partition    : 2026-03-17","logger":"task.stdout"}
+{"timestamp":"2026-03-17T15:31:06.903623Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
