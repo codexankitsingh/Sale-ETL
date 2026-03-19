@@ -5,15 +5,6 @@
 ```markdown
 # 🚀 Sale-ETL — End-to-End Data Engineering Pipeline
 
-![Python](https://img.shields.io/badge/Python-3.12-blue)
-![Airflow](https://img.shields.io/badge/Apache%20Airflow-3.x-green)
-![Spark](https://img.shields.io/badge/Apache%20Spark-3.x-orange)
-![BigQuery](https://img.shields.io/badge/BigQuery-Google%20Cloud-blue)
-![Dataproc](https://img.shields.io/badge/Dataproc-Google%20Cloud-yellow)
-![Docker](https://img.shields.io/badge/Docker-Compose-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
-
----
 
 ## 📌 Table of Contents
 
