@@ -57,42 +57,6 @@ BigQuery tables and views — refreshed daily with zero manual intervention.**
 
 ---
 
-## 🏗️ Architecture
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    SALE-ETL ARCHITECTURE                        │
-│                                                                 │
-│  ┌──────────────────────────────────────────────────────────┐  │
-│  │              LOCAL ENVIRONMENT (Docker)                   │  │
-│  │  Apache Airflow — Webserver, Scheduler, Worker, Postgres  │  │
-│  └──────────────────────────┬───────────────────────────────┘  │
-│                             │ GCP API Calls                     │
-│  ┌──────────────────────────▼───────────────────────────────┐  │
-│  │                 GOOGLE CLOUD PLATFORM                     │  │
-│  │                                                           │  │
-│  │  ┌─────────────────────────────────────────────────┐    │  │
-│  │  │           Google Cloud Storage (GCS)             │    │  │
-│  │  │  sale-etl-source-bucket → source_zone/           │    │  │
-│  │  │  sale-etl-main-bucket   → landing_zone/          │    │  │
-│  │  │                         → processed_zone/        │    │  │
-│  │  │                         → spark_jobs/            │    │  │
-│  │  └─────────────────────────────────────────────────┘    │  │
-│  │                                                           │  │
-│  │  ┌──────────────────┐    ┌──────────────────────────┐   │  │
-│  │  │  GCP Dataproc    │    │      BigQuery            │   │  │
-│  │  │  Spark Cluster   │    │  sales_raw    (8 tables) │   │  │
-│  │  │  Auto-created    │    │  sales_analytics (8 views│   │  │
-│  │  │  Auto-deleted    │    └──────────────┬───────────┘   │  │
-│  │  └──────────────────┘                   │               │  │
-│  │                              ┌──────────▼──────────┐    │  │
-│  │                              │   Looker Studio     │    │  │
-│  │                              │  5 Dashboards       │    │  │
-│  │                              └─────────────────────┘    │  │
-│  └───────────────────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────────────────┘
-```
-
 ### Data Flow
 
 ```
@@ -131,51 +95,6 @@ BigQuery tables and views — refreshed daily with zero manual intervention.**
 
 ---
 
-## 📁 Project Structure
-
-```
-Sale-ETL/
-│
-├── dags/
-│   ├── config.py                    # All configuration constants
-│   ├── etl_pipeline_dag.py          # Main ETL pipeline DAG (44+ tasks)
-│   └── source_staging_dag.py        # Source file validation + upload DAG
-│
-├── spark_jobs/
-│   ├── spark_utils.py               # Shared transformation utilities
-│   ├── transform_orders.py
-│   ├── transform_order_items.py
-│   ├── transform_order_payments.py
-│   ├── transform_order_reviews.py
-│   ├── transform_customers.py
-│   ├── transform_sellers.py
-│   ├── transform_products.py
-│   └── transform_geolocations.py
-│
-├── sql/
-│   └── views/
-│       ├── vw_order_summary.sql
-│       ├── vw_daily_sales_performance.sql
-│       ├── vw_customer_profile.sql
-│       ├── vw_seller_performance.sql
-│       ├── vw_product_performance.sql
-│       ├── vw_payment_analysis.sql
-│       ├── vw_review_sentiment.sql
-│       └── vw_geo_sales_heatmap.sql
-│
-├── data/
-│   └── *.csv                        # Source CSV files (not committed)
-│
-├── credentials/                     # GCP service account key (not committed)
-├── logs/                            # Airflow task logs (not committed)
-├── plugins/                         # Airflow plugins
-├── docker-compose.yml               # Airflow local environment
-├── .env                             # Environment variables (not committed)
-├── .env.example                     # Environment variables template
-├── .gitignore
-├── requirements.txt
-└── README.md
-```
 
 ---
 
